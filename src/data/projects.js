@@ -15,7 +15,7 @@ export const REVEALS = [
     image: csaXeniaEntrance,
     tags: ["HTML / CSS", "Redesign"],
     links: [
-      { label: "view live site", href: "https://andrewhaines.me/csa-xenia/" },
+      { label: "view live site", href: "https://kryhr.github.io/csa-xenia/" },
       { label: "source", href: "https://github.com/Kryhr/csa-xenia" }
     ]
   },
@@ -35,13 +35,6 @@ export const REVEALS = [
  * identity of their own yet. Rendered as a simple list, not a reveal.
  */
 export const OTHER_WORK = [
-  {
-    id: "mev-arbitrage-bot",
-    title: "MEV-arbitrage-bot",
-    blurb: "Scans Uniswap V2/V3 on Ethereum mainnet for cross-venue price gaps and estimates arbitrage profit after gas. Read-only — it never builds or sends a transaction.",
-    tags: ["Python", "Web3", "Read-only"],
-    links: [{ label: "source", href: "https://github.com/Kryhr/MEV-arbitrage-bot" }]
-  },
   {
     id: "quant-trading-skills",
     title: "26-quant-trading-skills",

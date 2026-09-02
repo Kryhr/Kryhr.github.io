@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import { initRouteSync } from "./lib/routeSync.js";
+
 import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
 import ProjectReveal from "./components/ProjectReveal.jsx";
@@ -8,6 +11,8 @@ import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 
 export default function App() {
+  useEffect(() => initRouteSync(), []);
+
   return (
     <>
       <a href="#main-content" className="skip-link">Skip to main content</a>

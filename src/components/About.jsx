@@ -10,7 +10,7 @@ export default function About() {
           <p style={{ fontFamily: "var(--font-display)", fontStyle: "italic", fontWeight: 600, fontSize: "var(--text-xl)", lineHeight: 1.35, marginBottom: "var(--space-8)" }}>
             I build quant trading systems and back them with backtests I actually trust — which
             mostly means trying to break my own results before anyone else can. Alongside that,
-            web software: a directory site, a school redesign, a small blog on my own VPS.
+            web software: a directory site, a full school redesign, and the tools behind both.
           </p>
           <p style={{ color: "var(--ink-dim)", maxWidth: "56ch", margin: "0 auto" }}>
             Most of what I ship comes from AI skill libraries I've written myself — for trading

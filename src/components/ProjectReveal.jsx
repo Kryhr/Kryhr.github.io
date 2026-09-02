@@ -47,8 +47,8 @@ export default function ProjectReveal() {
         if (!panel) return;
         const img = panel.querySelector("img");
         if (i === idx) {
-          const enter = Math.min(local / 0.45, 1);
-          const exit = Math.max((local - 0.62) / 0.38, 0);
+          const enter = Math.min(local / 0.22, 1);
+          const exit = Math.max((local - 0.7) / 0.3, 0);
           panel.style.opacity = String(Math.min(enter, 1) * (1 - exit));
           panel.style.zIndex = "5";
           if (img) img.style.transform = `scale(${1.12 - enter * 0.07 + exit * 0.05})`;

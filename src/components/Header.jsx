@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
+import { goToSection } from "../lib/routeSync.js";
 
 const LINKS = [
-  { href: "#projects", label: "Projects" },
-  { href: "#about", label: "About" },
-  { href: "#toolkit", label: "Toolkit" },
-  { href: "#school", label: "School" },
-  { href: "#contact", label: "Contact" }
+  { id: "projects", path: "/projects", label: "Projects" },
+  { id: "about", path: "/about", label: "About" },
+  { id: "toolkit", path: "/toolkit", label: "Toolkit" },
+  { id: "school", path: "/school", label: "School" },
+  { id: "contact", path: "/contact", label: "Contact" }
 ];
 
 export default function Header() {
@@ -19,10 +20,16 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const go = (e, id) => {
+    e.preventDefault();
+    goToSection(id);
+    setOpen(false);
+  };
+
   return (
     <header className={`site-header${scrolled ? " is-scrolled" : ""}`}>
       <div className="container">
-        <a href="#top" className="wordmark">
+        <a href="/" className="wordmark" onClick={(e) => go(e, "top")}>
           andrewhaines<span className="dot">.me</span>
         </a>
 
@@ -41,7 +48,7 @@ export default function Header() {
 
         <nav className={`primary-nav${open ? " is-open" : ""}`} id="primary-nav" aria-label="Primary">
           {LINKS.map((l) => (
-            <a key={l.href} href={l.href} onClick={() => setOpen(false)}>
+            <a key={l.id} href={l.path} onClick={(e) => go(e, l.id)}>
               {l.label}
             </a>
           ))}

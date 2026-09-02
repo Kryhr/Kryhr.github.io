@@ -40,6 +40,8 @@
 }
 
 .scroll-cue {
+  display: flex;
+  justify-content: center;
   margin-top: var(--space-16);
   color: var(--ink-faint);
 }

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { popIn } from "../lib/motion.js";
+import { goToSection } from "../lib/routeSync.js";
 
 export default function Hero() {
   return (
@@ -20,8 +21,8 @@ export default function Hero() {
           Trading systems, web software, and everything else I've actually made — every project ahead is real.
         </motion.p>
         <motion.div className="hero-actions" custom={3} variants={popIn}>
-          <a href="#projects" className="btn btn-primary">View projects</a>
-          <a href="#contact" className="btn">Get in touch</a>
+          <a href="/projects" className="btn btn-primary" onClick={(e) => { e.preventDefault(); goToSection("projects"); }}>View projects</a>
+          <a href="/contact" className="btn" onClick={(e) => { e.preventDefault(); goToSection("contact"); }}>Get in touch</a>
         </motion.div>
         <motion.div className="scroll-cue" custom={4} variants={popIn}>
           <svg width="16" height="24" viewBox="0 0 16 24" fill="none" aria-hidden="true">

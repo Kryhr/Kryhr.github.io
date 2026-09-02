@@ -1,6 +1,6 @@
 /* ---------------------------------------------------------------
    Design tokens — editorial, near-monochrome paper/ink with one
-   lime accent. Fraunces (italic display) + Inter (body/UI).
+   muted slate accent. Fraunces (italic display) + Inter (body/UI).
    --------------------------------------------------------------- */
 
 :root {
@@ -12,9 +12,9 @@
   --line: rgba(20, 20, 15, 0.12);
   --line-strong: rgba(20, 20, 15, 0.28);
 
-  --accent: #cdef2f;
-  --accent-ink: #14140f;
-  --accent-dim: rgba(205, 239, 47, 0.16);
+  --accent: #6f7d8c;
+  --accent-ink: #f5f4f0;
+  --accent-dim: rgba(111, 125, 140, 0.14);
 
   --focus: #14140f;
 
@@ -63,7 +63,8 @@
     --ink-faint: #6b6858;
     --line: rgba(242, 241, 233, 0.14);
     --line-strong: rgba(242, 241, 233, 0.3);
-    --accent-ink: #14140f;
+    --accent: #8b9aab;
+    --accent-ink: #0e0d09;
   }
 }
 :root[data-theme="dark"] {
@@ -74,7 +75,8 @@
   --ink-faint: #6b6858;
   --line: rgba(242, 241, 233, 0.14);
   --line-strong: rgba(242, 241, 233, 0.3);
-  --accent-ink: #14140f;
+  --accent: #8b9aab;
+  --accent-ink: #0e0d09;
 }
 
 @media (prefers-reduced-motion: reduce) {

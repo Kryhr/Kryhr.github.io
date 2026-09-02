@@ -98,9 +98,9 @@
 }
 
 .btn-primary:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--accent-ink);
+  background: var(--ink-dim);
+  border-color: var(--ink-dim);
+  color: var(--paper);
 }
 
 .link-arrow {
@@ -159,6 +159,7 @@
    --------------------------------------------------------------- */
 
 .card {
+  height: 100%;
   background: var(--paper-raised);
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
