@@ -11,10 +11,19 @@ import beeswaxSketch from "../assets/school/farm-to-table-sketch.jpg";
  * paragraph string, or { label, text } for a "**Label:** text" line,
  * or { list: [...] } for a bullet list.
  */
+/**
+ * Every school year that should appear as a tab, in order, whether or
+ * not it has projects yet. A year with no matching SCHOOL_PROJECTS
+ * entries renders as an honest "coming soon" placeholder rather than
+ * being hidden or filled with fabricated content.
+ */
+export const SCHOOL_YEARS = ["2025-26", "2026-27"];
+
 export const SCHOOL_PROJECTS = [
   {
     id: "cooking",
     course: "Cooking",
+    year: "2025-26",
     title: "Captain Cook$$",
     sections: [
       {
@@ -30,6 +39,7 @@ export const SCHOOL_PROJECTS = [
   {
     id: "adulting-101",
     course: "Adulting 101",
+    year: "2025-26",
     title: "Adulting 101",
     sections: [
       {
@@ -117,6 +127,7 @@ export const SCHOOL_PROJECTS = [
   {
     id: "revolt",
     course: "ReVolt",
+    year: "2025-26",
     title: "ReVolt: EV Battery Safety",
     sections: [
       {
@@ -199,6 +210,7 @@ export const SCHOOL_PROJECTS = [
   {
     id: "sustainability",
     course: "Sustainability",
+    year: "2025-26",
     title: "Sustainable Ecosystems: Bee-Safe Birdhouse",
     image: birdhouseSketch,
     imageCaption: "A 3D-modeled birdhouse design from the brainstorming phase.",
@@ -278,6 +290,7 @@ export const SCHOOL_PROJECTS = [
   {
     id: "farm-to-table",
     course: "Farm To Table",
+    year: "2025-26",
     title: "Farm To Table: Honey Bee Circular Economy",
     image: beeswaxSketch,
     imageCaption: "Early product sketches for beeswax candles and reusable beeswax wraps.",
@@ -361,6 +374,7 @@ export const SCHOOL_PROJECTS = [
   {
     id: "sap-project",
     course: "SAP Project",
+    year: "2025-26",
     title: "International Plant Shipping Using S.A.P.s",
     sections: [
       {
@@ -443,6 +457,7 @@ export const SCHOOL_PROJECTS = [
   {
     id: "honey-bee-role-project",
     course: "Honey Bee Role Project",
+    year: "2025-26",
     title: "Honey Bee Habitat Expansion: Forester Role",
     sections: [
       {
