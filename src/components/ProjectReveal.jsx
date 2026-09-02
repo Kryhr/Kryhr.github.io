@@ -53,7 +53,7 @@ export default function ProjectReveal() {
           panel.style.zIndex = "5";
           if (img) img.style.transform = `scale(${1.12 - enter * 0.07 + exit * 0.05})`;
           const copy = panel.querySelector(".reveal-copy");
-          if (copy) copy.style.transform = `translateY(${(1 - enter) * 20}px)`;
+          if (copy) copy.style.transform = `translateX(-50%) translateY(${(1 - enter) * 20}px)`;
         } else {
           panel.style.opacity = "0";
           panel.style.zIndex = "1";

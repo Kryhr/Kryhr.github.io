@@ -99,20 +99,33 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, rgba(10, 9, 6, 0.92) 0%, rgba(10, 9, 6, 0.6) 32%, rgba(10, 9, 6, 0.08) 58%);
+  background: linear-gradient(0deg, rgba(10, 9, 6, 0.55) 0%, rgba(10, 9, 6, 0.15) 40%, rgba(10, 9, 6, 0) 65%);
 }
 
+/*
+ * Contrast for the text over the photo can't rely on the gradient
+ * lining up with wherever the text happens to sit — a bright image
+ * (like a light website screenshot) shows straight through a
+ * position-based gradient. The copy block gets its own solid scrim
+ * instead, sized to its own content, so it's readable regardless of
+ * what's under it.
+ */
 .reveal-copy {
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 7vh;
+  left: 50%;
+  bottom: 6vh;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   color: #f6f5ef;
-  padding: 0 6vw;
+  max-width: min(680px, 88vw);
+  padding: var(--space-8) 7vw;
+  border-radius: var(--radius-lg);
+  background: rgba(8, 8, 6, 0.62);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .reveal-index {
@@ -120,7 +133,6 @@
   color: #d7dee4;
   font-weight: 600;
   margin-bottom: var(--space-4);
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .reveal-copy h2 {
