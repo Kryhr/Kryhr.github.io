@@ -3,13 +3,13 @@
    --------------------------------------------------------------- */
 
 .hero {
-  min-height: 68vh;
+  min-height: 54vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: var(--space-16) var(--space-6);
+  padding: var(--space-12) var(--space-6);
 }
 
 .hero-eyebrow {
