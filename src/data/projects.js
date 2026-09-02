@@ -36,6 +36,13 @@ export const REVEALS = [
  */
 export const OTHER_WORK = [
   {
+    id: "earnings-algorithm",
+    title: "earnings-algorithm",
+    blurb: "An earnings-reaction momentum strategy run as a Discord signal bot, not an auto-trader. Full historical backtest: +987% total return, 60.5% win rate, -15.2% max drawdown. Monte Carlo median +801% across 500 resamples — a historical backtest, not a live track record.",
+    tags: ["Python", "Discord Bot", "Quant"],
+    links: [{ label: "source", href: "https://github.com/Kryhr/earnings-algorithm" }]
+  },
+  {
     id: "quant-trading-skills",
     title: "26-quant-trading-skills",
     blurb: "Claude Code skills for building trading algorithms that don't just look good in a backtest — lookahead-bias checks, fill realism, overfitting guards.",
