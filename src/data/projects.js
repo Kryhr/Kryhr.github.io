@@ -13,6 +13,7 @@ export const REVEALS = [
     kicker: "school website redesign",
     blurb: "A full rebuild of my school's site, Community STEAM Academy — new campus, real photography, built from scratch with my own anti-slop skill library.",
     image: csaXeniaEntrance,
+    textColor: "light",
     tags: ["HTML / CSS", "Redesign"],
     links: [
       { label: "view live site", href: "https://kryhr.github.io/csa-xenia/" },
@@ -25,6 +26,7 @@ export const REVEALS = [
     kicker: "local farm & producer directory",
     blurb: "Every listing sourced and linked — public donation filings, a business's own statements, and self-reported profiles, never guessed.",
     image: disclosrShot,
+    textColor: "dark",
     tags: ["Directory", "Data"],
     links: [{ label: "disclosr.info", href: "https://disclosr.info" }]
   }
