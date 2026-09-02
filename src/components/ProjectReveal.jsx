@@ -47,14 +47,13 @@ export default function ProjectReveal() {
         if (!panel) return;
         const img = panel.querySelector("img");
         if (i === idx) {
-          // Opacity is never gated behind scroll progress into the segment,
-          // the active panel is visible the instant it becomes active
-          // (on arrival via scroll OR a direct jump from a nav link) so
-          // there's no blank/dead-looking gap. `enter` still drives the
-          // subtler scale/slide polish on top of that.
-          const enter = Math.min(local / 0.12, 1);
+          // Short fade-in (not gone entirely, that killed the reveal effect;
+          // not long either, that read as laggy) — full opacity within
+          // ~8% of the panel's own scroll segment, roughly one quick
+          // scroll tick, not a dead-feeling pause.
+          const enter = Math.min(local / 0.08, 1);
           const exit = Math.max((local - 0.85) / 0.15, 0);
-          panel.style.opacity = String(1 - exit);
+          panel.style.opacity = String(enter * (1 - exit));
           panel.style.zIndex = "5";
           if (img) img.style.transform = `scale(${1.08 - enter * 0.06 + exit * 0.04})`;
           const copy = panel.querySelector(".reveal-copy");

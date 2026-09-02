@@ -19,7 +19,18 @@ export function idForPath(path) {
 export function goToSection(id) {
   const el = document.getElementById(id);
   if (!el) return;
-  el.scrollIntoView({ behavior: "smooth", block: "start" });
+
+  if (id === "projects") {
+    // Landing exactly on the pinned reveal's first pixel means its own
+    // short scroll-triggered fade-in hasn't started yet (nothing has
+    // scrolled since the jump). Land a little past the top instead, so
+    // the first project is already faded in when you arrive.
+    const top = el.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({ top: top + window.innerHeight * 0.12, behavior: "smooth" });
+  } else {
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
   const path = pathForId(id);
   if (window.location.pathname !== path) {
     window.history.pushState(null, "", path);
@@ -40,7 +51,14 @@ export function initRouteSync() {
   if (initialId !== "top") {
     const el = document.getElementById(initialId);
     if (el) {
-      requestAnimationFrame(() => el.scrollIntoView({ behavior: "auto", block: "start" }));
+      requestAnimationFrame(() => {
+        if (initialId === "projects") {
+          const top = el.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo(0, top + window.innerHeight * 0.12);
+        } else {
+          el.scrollIntoView({ behavior: "auto", block: "start" });
+        }
+      });
     }
   }
 
@@ -69,7 +87,13 @@ export function initRouteSync() {
   const onPop = () => {
     const id = idForPath(window.location.pathname);
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (!el) return;
+    if (id === "projects") {
+      const top = el.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: top + window.innerHeight * 0.12, behavior: "smooth" });
+    } else {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
   window.addEventListener("popstate", onPop);
 
