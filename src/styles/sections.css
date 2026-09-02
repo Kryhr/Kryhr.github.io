@@ -3,7 +3,7 @@
    --------------------------------------------------------------- */
 
 .hero {
-  min-height: 88vh;
+  min-height: 68vh;
   display: flex;
   flex-direction: column;
   align-items: center;
