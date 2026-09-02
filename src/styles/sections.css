@@ -95,12 +95,6 @@
   display: block;
 }
 
-/*
- * No overlay on the photo itself — the image stays as shot. Contrast
- * instead comes from picking the copy's text color per project (light
- * text for a dark/photo image, dark ink for a light screenshot like
- * disclosr's) via the .reveal-copy--light / --dark modifier.
- */
 .reveal-copy {
   position: absolute;
   left: 50%;
@@ -110,47 +104,35 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  color: #f6f5ef;
   max-width: min(680px, 88vw);
-  padding: 0 6vw;
-}
-
-.reveal-copy--light {
-  --copy-fg: #f6f5ef;
-  --copy-fg-soft: rgba(246, 245, 239, 0.82);
-  --copy-fg-faint: rgba(246, 245, 239, 0.32);
-  --copy-shadow: 0 1px 3px rgba(0, 0, 0, 0.55), 0 4px 18px rgba(0, 0, 0, 0.4);
-}
-
-.reveal-copy--dark {
-  --copy-fg: #14140f;
-  --copy-fg-soft: rgba(20, 20, 15, 0.78);
-  --copy-fg-faint: rgba(20, 20, 15, 0.3);
-  --copy-shadow: 0 1px 2px rgba(255, 255, 255, 0.5), 0 2px 14px rgba(255, 255, 255, 0.55);
+  padding: var(--space-8) 7vw;
+  border-radius: var(--radius-lg);
+  background: rgba(8, 8, 6, 0.62);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .reveal-index {
   font-size: var(--text-sm);
-  color: var(--copy-fg);
-  font-weight: 700;
+  color: #d7dee4;
+  font-weight: 600;
   margin-bottom: var(--space-4);
-  text-shadow: var(--copy-shadow);
 }
 
 .reveal-copy h2 {
-  color: var(--copy-fg);
+  color: #f6f5ef;
   font-size: clamp(2.2rem, 5vw, 3.6rem);
   margin-bottom: var(--space-4);
   max-width: 18ch;
-  text-shadow: var(--copy-shadow);
 }
 
 .reveal-copy p {
-  color: var(--copy-fg-soft);
+  color: rgba(246, 245, 239, 0.82);
   font-size: var(--text-base);
   max-width: 52ch;
   margin-bottom: var(--space-6);
   line-height: 1.6;
-  text-shadow: var(--copy-shadow);
 }
 
 .reveal-copy .tag-list {
@@ -159,9 +141,8 @@
 }
 
 .reveal-copy .tag {
-  color: var(--copy-fg);
-  border-color: var(--copy-fg-faint);
-  background: color-mix(in srgb, var(--copy-fg) 12%, transparent);
+  color: rgba(246, 245, 239, 0.75);
+  border-color: rgba(246, 245, 239, 0.32);
 }
 
 .reveal-copy a.cta {
@@ -170,10 +151,9 @@
   gap: var(--space-2);
   font-weight: 600;
   font-size: var(--text-sm);
-  color: var(--copy-fg);
+  color: #f6f5ef;
   border-bottom: 1px solid var(--accent);
   padding-bottom: 3px;
-  text-shadow: var(--copy-shadow);
 }
 
 .reveal-dots {

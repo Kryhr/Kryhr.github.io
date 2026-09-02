@@ -123,7 +123,7 @@ export default function ProjectReveal() {
 
 function PanelCopy({ project, index }) {
   return (
-    <div className={`reveal-copy reveal-copy--${project.textColor === "dark" ? "dark" : "light"}`}>
+    <div className="reveal-copy">
       <div className="reveal-index">
         {String(index + 1).padStart(2, "0")} — {project.kicker}
       </div>
