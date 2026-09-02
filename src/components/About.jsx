@@ -49,7 +49,7 @@ export default function About() {
           custom={2}
           style={{ marginTop: "var(--space-16)", display: "flex", flexDirection: "column", gap: "var(--space-4)" }}
         >
-          <span className="eyebrow" style={{ justifyContent: "center" }}>Currently</span>
+          <span className="eyebrow" style={{ justifyContent: "center" }}>Currently working on</span>
 
           <div className="card" style={{ textAlign: "left" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "var(--space-3)", flexWrap: "wrap" }}>
