@@ -8,7 +8,7 @@ export default function About() {
         <motion.div initial="hidden" whileInView="show" viewport={viewportOnce} variants={slideUp}>
           <span className="eyebrow" style={{ justifyContent: "center" }}>About</span>
           <p style={{ fontFamily: "var(--font-display)", fontStyle: "italic", fontWeight: 600, fontSize: "var(--text-xl)", lineHeight: 1.35, marginBottom: "var(--space-8)" }}>
-            I build quant trading systems and back them with backtests I actually trust — which
+            I build trading algorithms and back them with backtests I actually trust — which
             mostly means trying to break my own results before anyone else can. Alongside that,
             web software: a directory site, a full school redesign, and the tools behind both.
           </p>
@@ -38,6 +38,50 @@ export default function About() {
           <div>
             <div style={{ fontFamily: "var(--font-display)", fontStyle: "italic", fontSize: "var(--text-xl)" }}>0</div>
             <div style={{ color: "var(--ink-dim)", fontSize: "var(--text-sm)" }}>stock templates used here</div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={viewportOnce}
+          variants={slideUp}
+          custom={2}
+          style={{ marginTop: "var(--space-16)", display: "flex", flexDirection: "column", gap: "var(--space-4)" }}
+        >
+          <span className="eyebrow" style={{ justifyContent: "center" }}>Currently</span>
+
+          <div className="card" style={{ textAlign: "left" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "var(--space-3)", flexWrap: "wrap" }}>
+              <span className="status-tag">in progress</span>
+              <h3 style={{ margin: 0 }}>Algorithmic-Crypto-Analysis</h3>
+            </div>
+            <p className="card-blurb">
+              Finding exploitable microstructure alpha in less-liquid mid-cap coins (ALGO, ICP, QNT
+              to start) — real order-book imbalance and trade-print patterns, not just price/volume.
+            </p>
+            <div className="card-links">
+              <a href="https://github.com/Kryhr/Algorithmic-Crypto-Analysis-" target="_blank" rel="noopener noreferrer">
+                source <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <div className="card" style={{ textAlign: "left" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "var(--space-3)", flexWrap: "wrap" }}>
+              <span className="status-tag">in progress</span>
+              <h3 style={{ margin: 0 }}>AI-Prompts</h3>
+            </div>
+            <p className="card-blurb">
+              An educational study on why and how AI models can be jailbroken — not a how-to, a
+              record of what worked, what didn't, and why safety refusals held or failed against
+              different models and prompt styles.
+            </p>
+            <div className="card-links">
+              <a href="https://github.com/Kryhr/AI-Prompts" target="_blank" rel="noopener noreferrer">
+                source <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
           </div>
         </motion.div>
       </div>
