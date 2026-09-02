@@ -18,7 +18,7 @@ export default function Hero() {
           <span className="accent">Linked.</span>
         </motion.h1>
         <motion.p className="hero-sub" custom={2} variants={popIn}>
-          Trading systems, web software, and everything else I've actually made — every project ahead is real.
+          Trading systems, web software, and everything else I've actually made. Every project ahead is real.
         </motion.p>
         <motion.div className="hero-actions" custom={3} variants={popIn}>
           <a href="/projects" className="btn btn-primary" onClick={(e) => { e.preventDefault(); goToSection("projects"); }}>View projects</a>

@@ -40,7 +40,7 @@ export default function SchoolProjects() {
         <div className="section-head">
           <span className="eyebrow" style={{ justifyContent: "center" }}>School</span>
           <h2>Community STEAM Academy portfolio</h2>
-          <p>Seven projects from school — pick one, then flip through its sections.</p>
+          <p>Seven projects from school. Pick one, then flip through its sections.</p>
         </div>
 
         <motion.div initial="hidden" whileInView="show" viewport={viewportOnce} variants={slideUp} style={{ marginTop: "var(--space-12)" }}>

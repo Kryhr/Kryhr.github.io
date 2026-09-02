@@ -8,12 +8,12 @@ export default function About() {
         <motion.div initial="hidden" whileInView="show" viewport={viewportOnce} variants={slideUp}>
           <span className="eyebrow" style={{ justifyContent: "center" }}>About</span>
           <p style={{ fontFamily: "var(--font-display)", fontStyle: "italic", fontWeight: 600, fontSize: "var(--text-xl)", lineHeight: 1.35, marginBottom: "var(--space-8)" }}>
-            I build trading algorithms and back them with backtests I actually trust — which
+            I build trading algorithms and back them with backtests I actually trust, which
             mostly means trying to break my own results before anyone else can. Alongside that,
             web software: a directory site, a full school redesign, and the tools behind both.
           </p>
           <p style={{ color: "var(--ink-dim)", maxWidth: "56ch", margin: "0 auto" }}>
-            Most of what I ship comes from AI skill libraries I've written myself — for trading
+            Most of what I ship comes from AI skill libraries I've written myself, for trading
             strategy discipline, and for keeping the sites I build from looking like everyone else's.
             This one included.
           </p>
@@ -58,7 +58,7 @@ export default function About() {
             </div>
             <p className="card-blurb">
               Finding exploitable microstructure alpha in less-liquid mid-cap coins (ALGO, ICP, QNT
-              to start) — real order-book imbalance and trade-print patterns, not just price/volume.
+              to start): real order-book imbalance and trade-print patterns, not just price/volume.
             </p>
             <div className="card-links">
               <a href="https://github.com/Kryhr/Algorithmic-Crypto-Analysis-" target="_blank" rel="noopener noreferrer">
@@ -73,7 +73,7 @@ export default function About() {
               <h3 style={{ margin: 0 }}>AI-Prompts</h3>
             </div>
             <p className="card-blurb">
-              An educational study on why and how AI models can be jailbroken — not a how-to, a
+              An educational study on why and how AI models can be jailbroken. Not a how-to: a
               record of what worked, what didn't, and why safety refusals held or failed against
               different models and prompt styles.
             </p>

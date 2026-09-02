@@ -4,7 +4,7 @@ import beeswaxSketch from "../assets/school/farm-to-table-sketch.jpg";
 /**
  * Real content transcribed from Andrew's Community STEAM Academy
  * portfolio (Google Sites). Each project has its own real set of
- * section names — they aren't identical across projects, and that's
+ * section names, they aren't identical across projects, and that's
  * left as-is rather than forced into one template.
  *
  * Section `body` is an array of blocks. A block is either a plain
@@ -77,9 +77,9 @@ export const SCHOOL_PROJECTS = [
       {
         heading: "Challenges & Solutions",
         body: [
-          { label: "Challenge: Understanding real-life expenses", text: "Solution — I researched housing, utilities, insurance, and food costs to create a realistic budget." },
-          { label: "Challenge: Balancing health and cost", text: "Solution — I planned meals using affordable foods like rice, vegetables, and chicken." },
-          { label: "Challenge: Planning for the future", text: "Solution — I created savings and emergency funds to prepare for unexpected costs." },
+          { label: "Challenge: Understanding real-life expenses", text: "Solution: I researched housing, utilities, insurance, and food costs to create a realistic budget." },
+          { label: "Challenge: Balancing health and cost", text: "Solution: I planned meals using affordable foods like rice, vegetables, and chicken." },
+          { label: "Challenge: Planning for the future", text: "Solution: I created savings and emergency funds to prepare for unexpected costs." },
           { label: "What I learned", text: "Planning ahead reduces stress and helps create a stable future." }
         ]
       },
@@ -117,7 +117,7 @@ export const SCHOOL_PROJECTS = [
   {
     id: "revolt",
     course: "ReVolt",
-    title: "ReVolt — EV Battery Safety",
+    title: "ReVolt: EV Battery Safety",
     sections: [
       {
         heading: "Project Overview",
@@ -164,8 +164,8 @@ export const SCHOOL_PROJECTS = [
       {
         heading: "Challenges & Solutions",
         body: [
-          { label: "Challenge: Understanding EV battery fires", text: "Solution — we researched reliable sources like the National Fire Protection Association to understand how thermal runaway works." },
-          { label: "Challenge: Making a safe prototype", text: "Solution — we used fake sensors and safe materials instead of real batteries to avoid danger." }
+          { label: "Challenge: Understanding EV battery fires", text: "Solution: we researched reliable sources like the National Fire Protection Association to understand how thermal runaway works." },
+          { label: "Challenge: Making a safe prototype", text: "Solution: we used fake sensors and safe materials instead of real batteries to avoid danger." }
         ]
       },
       {
@@ -199,14 +199,14 @@ export const SCHOOL_PROJECTS = [
   {
     id: "sustainability",
     course: "Sustainability",
-    title: "Sustainable Ecosystems — Bee-Safe Birdhouse",
+    title: "Sustainable Ecosystems: Bee-Safe Birdhouse",
     image: birdhouseSketch,
     imageCaption: "A 3D-modeled birdhouse design from the brainstorming phase.",
     sections: [
       {
         heading: "Project Overview",
         body: [
-          "How can we analyze and improve our records more responsibly, reduce waste, and positively impact the environment at home and school? We are creating a bird house made by waste and supplied by waste. Our birdhouse will be made completely by waste we find — we will make a birdhouse as well as a bird feeder. Our deliverable is making a bird-safe haven near the Annex to support our wildlife."
+          "How can we analyze and improve our records more responsibly, reduce waste, and positively impact the environment at home and school? We are creating a bird house made by waste and supplied by waste. Our birdhouse will be made completely by waste we find. We will make a birdhouse as well as a bird feeder. Our deliverable is making a bird-safe haven near the Annex to support our wildlife."
         ]
       },
       {
@@ -214,7 +214,7 @@ export const SCHOOL_PROJECTS = [
         body: [
           "We started by discussing what birds live in our area and what types of shelters or feeders they prefer. Then we talked about what waste materials we could use safely. Some ideas included using milk cartons, cans, cardboard, old wood, leftover food for feeders, and solar-powered lights made from recycled parts. We made a list of ideas and voted on the most realistic and helpful ones.",
           "Each team member drew a design of a birdhouse. We included features like entrance holes, perches, feeder areas, and slanted roofs for rain protection. After comparing our designs, we combined the best parts into one final sketch to use as our blueprint. We used cardboard to build a basic model, tested balance, perch strength, and hole size, and figured out how to waterproof parts using scrap plastic or foil.",
-          "We showed our prototype to teachers and classmates for feedback and tested it briefly outside — noticing problems like the roof coming loose or the perch being too small — and planned changes for the next version using stronger, more weatherproof materials."
+          "We showed our prototype to teachers and classmates for feedback and tested it briefly outside, noticing problems like the roof coming loose or the perch being too small, and planned changes for the next version using stronger, more weatherproof materials."
         ]
       },
       {
@@ -233,7 +233,7 @@ export const SCHOOL_PROJECTS = [
         body: [
           { label: "Community Service Learning", text: "We served our community by creating shelters for local birds, improving the environment, and encouraging others to recycle and reuse." },
           { label: "Dynamic Movement", text: "We explored outdoor areas, hiked to find birds, and tracked our heart rates (BPM) during birdwatching to include physical activity in our project." },
-          { label: "Holistic Thinking", text: "We connected science, art, and environmental responsibility — understanding how human waste affects ecosystems and how small actions can make a big difference." },
+          { label: "Holistic Thinking", text: "We connected science, art, and environmental responsibility, understanding how human waste affects ecosystems and how small actions can make a big difference." },
           { label: "Creative Expression", text: "Designing and decorating our birdhouses allowed us to express creativity through color, shape, and form while using recycled materials." },
           { label: "Effective Communication", text: "We worked as a team, shared ideas, and prepared a formal slide presentation to clearly communicate our process and results." },
           { label: "Confident Identity", text: "Each team member contributed unique skills and took leadership roles, building confidence through teamwork and problem-solving." }
@@ -256,8 +256,8 @@ export const SCHOOL_PROJECTS = [
       {
         heading: "Challenges & Solutions",
         body: [
-          { label: "Challenge: Finding materials that were safe and sturdy", text: "Solution — researched eco-friendly, non-toxic materials and reinforced weak parts using safe adhesives and natural coatings." },
-          { label: "Challenge: Making the prototype weather-resistant", text: "Solution — used waterproof coatings and stronger recycled parts for the final model." }
+          { label: "Challenge: Finding materials that were safe and sturdy", text: "Solution: researched eco-friendly, non-toxic materials and reinforced weak parts using safe adhesives and natural coatings." },
+          { label: "Challenge: Making the prototype weather-resistant", text: "Solution: used waterproof coatings and stronger recycled parts for the final model." }
         ]
       },
       {
@@ -278,7 +278,7 @@ export const SCHOOL_PROJECTS = [
   {
     id: "farm-to-table",
     course: "Farm To Table",
-    title: "Farm To Table — Honey Bee Circular Economy",
+    title: "Farm To Table: Honey Bee Circular Economy",
     image: beeswaxSketch,
     imageCaption: "Early product sketches for beeswax candles and reusable beeswax wraps.",
     sections: [
@@ -325,8 +325,8 @@ export const SCHOOL_PROJECTS = [
       {
         heading: "Challenges & Solutions",
         body: [
-          { label: "Challenge: Designing a bee box that was both functional and sustainable", text: "Solution — used 3D modeling software to test designs before building the real model." },
-          { label: "Challenge: Understanding how to safely handle bees", text: "Solution — researched proper beekeeping methods and consulted guides." },
+          { label: "Challenge: Designing a bee box that was both functional and sustainable", text: "Solution: used 3D modeling software to test designs before building the real model." },
+          { label: "Challenge: Understanding how to safely handle bees", text: "Solution: researched proper beekeeping methods and consulted guides." },
           { label: "Reflection", text: "We learned that sustainable design takes patience, creativity, and testing. Collaboration was key in solving problems effectively." }
         ]
       },
@@ -367,7 +367,7 @@ export const SCHOOL_PROJECTS = [
         heading: "Project Overview",
         body: [
           { label: "Driving Question", text: "How can S.A.P.s (Super Absorbent Polymers) be used to help ship plants to different regions of the world?" },
-          "We started with the question, \"How do you keep plants hydrated for long periods of time while shipping?\" Our first idea was to use water beads that hold water and release it slowly into the soil. Then we thought about mixing potassium polyacrylate into the soil instead, because it adds nutrients and isn't toxic to the plants. Finally, we decided to use biodegradable cups filled with this soil mix to ship the plants. After doing some research we found out this method is actually one of the best ways to ship plants — it's safe, cheap, and helps the plants stay healthy."
+          "We started with the question, \"How do you keep plants hydrated for long periods of time while shipping?\" Our first idea was to use water beads that hold water and release it slowly into the soil. Then we thought about mixing potassium polyacrylate into the soil instead, because it adds nutrients and isn't toxic to the plants. Finally, we decided to use biodegradable cups filled with this soil mix to ship the plants. After doing some research we found out this method is actually one of the best ways to ship plants: it's safe, cheap, and helps the plants stay healthy."
         ]
       },
       {
@@ -386,7 +386,7 @@ export const SCHOOL_PROJECTS = [
         body: [
           { label: "Community Service Learning", text: "Our idea helps farmers, plant sellers, and the environment." },
           { label: "Dynamic Movement", text: "We kept moving through ideas fast and didn't give up when one didn't work." },
-          { label: "Holistic Thinking", text: "We thought about the whole system — plants, shipping, soil, and waste." },
+          { label: "Holistic Thinking", text: "We thought about the whole system: plants, shipping, soil, and waste." },
           { label: "Creative Expression", text: "We had to come up with new ways to use polymers." },
           { label: "Effective Communication", text: "We shared ideas and research with the group so everyone was on the same page." },
           { label: "Confident Identity", text: "We stuck with our idea because we believed it could actually work." }
@@ -399,7 +399,7 @@ export const SCHOOL_PROJECTS = [
             "Asked the main question about keeping plants hydrated",
             "Looked up how S.A.P.s work and what kinds are safe for soil",
             "Compared polymer beads vs. potassium polymer in soil",
-            "Picked the idea that made the most sense — potassium + biodegradable cups",
+            "Picked the idea that made the most sense: potassium + biodegradable cups",
             "Started planning what materials and tests we'd need"
           ] }
         ]
@@ -407,8 +407,8 @@ export const SCHOOL_PROJECTS = [
       {
         heading: "Challenges & Solutions",
         body: [
-          { label: "Challenge", text: "We didn't know which idea would actually work best. Solution — we did more research until we found which one was most efficient and least toxic." },
-          { label: "Challenge", text: "Figuring out what materials we needed. Solution — we made a list and planned to get supplies." },
+          { label: "Challenge", text: "We didn't know which idea would actually work best. Solution: we did more research until we found which one was most efficient and least toxic." },
+          { label: "Challenge", text: "Figuring out what materials we needed. Solution: we made a list and planned to get supplies." },
           { label: "Reflection", text: "We learned that even simple ideas can get complicated fast, and that doing research helps a lot when you're unsure." }
         ]
       },
@@ -443,23 +443,23 @@ export const SCHOOL_PROJECTS = [
   {
     id: "honey-bee-role-project",
     course: "Honey Bee Role Project",
-    title: "Honey Bee Habitat Expansion — Forester Role",
+    title: "Honey Bee Habitat Expansion: Forester Role",
     sections: [
       {
         heading: "Project Overview",
         body: [
-          "In this project we each got assigned our \"expert\" roles. Each of us researched our own role. After we got our role we got into groups for where our role was needed — mine was the Honey Bee Habitat Expansion."
+          "In this project we each got assigned our \"expert\" roles. Each of us researched our own role. After we got our role we got into groups for where our role was needed: mine was the Honey Bee Habitat Expansion."
         ]
       },
       {
         heading: "My Role",
         body: [
           { label: "Role", text: "Forester." },
-          { label: "Core Lens", text: "Managing forests for timber, biodiversity, and recreation. Leaving forests untouched maximizes ecological benefits, while responsible timber harvesting balances human needs with ecosystem health — the key is sustainable management to get the best of both worlds." },
-          { label: "Mentor Prompt", text: "How can forest management serve both people and ecosystems? By using resources sustainably, protecting habitats, storing carbon, conserving water and soil, and involving communities — it balances human needs with environmental health." },
-          { label: "Vocabulary — Canopy", text: "The upper layer of a forest formed by the crowns of trees. It provides shade, habitat, and regulates temperature and light for the plants and animals below." },
-          { label: "Vocabulary — Succession", text: "The natural process by which ecosystems change over time, with one group of plants and animals gradually being replaced by another until a stable ecosystem develops." },
-          { label: "Vocabulary — Silviculture", text: "The practice of managing and cultivating forests to meet specific goals, such as timber production, wildlife habitat, or ecosystem health." }
+          { label: "Core Lens", text: "Managing forests for timber, biodiversity, and recreation. Leaving forests untouched maximizes ecological benefits, while responsible timber harvesting balances human needs with ecosystem health. The key is sustainable management to get the best of both worlds." },
+          { label: "Mentor Prompt", text: "How can forest management serve both people and ecosystems? By using resources sustainably, protecting habitats, storing carbon, conserving water and soil, and involving communities. It balances human needs with environmental health." },
+          { label: "Vocabulary: Canopy", text: "The upper layer of a forest formed by the crowns of trees. It provides shade, habitat, and regulates temperature and light for the plants and animals below." },
+          { label: "Vocabulary: Succession", text: "The natural process by which ecosystems change over time, with one group of plants and animals gradually being replaced by another until a stable ecosystem develops." },
+          { label: "Vocabulary: Silviculture", text: "The practice of managing and cultivating forests to meet specific goals, such as timber production, wildlife habitat, or ecosystem health." }
         ]
       }
     ]

@@ -125,7 +125,7 @@ function PanelCopy({ project, index }) {
   return (
     <div className="reveal-copy">
       <div className="reveal-index">
-        {String(index + 1).padStart(2, "0")} — {project.kicker}
+        {String(index + 1).padStart(2, "0")} · {project.kicker}
       </div>
       <h2>{project.title}</h2>
       <p>{project.blurb}</p>
