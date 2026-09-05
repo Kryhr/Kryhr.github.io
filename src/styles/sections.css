@@ -75,6 +75,25 @@
   overflow: hidden;
 }
 
+.reveal-progress {
+  position: absolute;
+  top: 72px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.reveal-progress span {
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  background: var(--accent);
+}
+
 .reveal-panel {
   position: absolute;
   inset: 0;
@@ -167,19 +186,52 @@
   z-index: 20;
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  align-items: flex-end;
+  gap: var(--space-4);
 }
 
-.reveal-dots span {
+.reveal-dot {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.reveal-dot i {
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background: var(--line-strong);
-  transition: background var(--duration-fast) var(--ease-standard);
+  transition: background var(--duration-fast) var(--ease-standard),
+              transform var(--duration-fast) var(--ease-standard);
 }
 
-.reveal-dots span.is-active {
+.reveal-dot.is-active i {
   background: var(--accent);
+  transform: scale(1.5);
+}
+
+.reveal-dot em {
+  position: absolute;
+  right: 16px;
+  font-style: normal;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  white-space: nowrap;
+  color: #f6f5ef;
+  background: rgba(8, 8, 6, 0.7);
+  padding: 4px 10px;
+  border-radius: 999px;
+  opacity: 0;
+  transform: translateX(4px);
+  pointer-events: none;
+  transition: opacity var(--duration-fast) var(--ease-standard),
+              transform var(--duration-fast) var(--ease-standard);
+}
+
+.reveal-dot:hover em,
+.reveal-dot.is-active em {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Mobile / reduced-motion fallback: plain stacked full-bleed sections */

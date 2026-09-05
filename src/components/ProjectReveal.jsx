@@ -1,11 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import { REVEALS } from "../data/projects.js";
 
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const smooth = (x) => { const c = clamp(x); return c * c * (3 - 2 * c); };
+
 /**
- * Full-bleed, scroll-pinned project reveal: the stage pins for one
- * viewport per project and each panel enters/exits based on scroll
- * fraction through the stage. Plain scroll math (no GSAP/Lenis) so
- * position: sticky behaves exactly like native scroll expects.
+ * Full-bleed, scroll-pinned project reveal. Unlike a hard panel-switch,
+ * every project's opacity is a continuous function of scroll distance
+ * from its own segment, so adjacent projects genuinely crossfade through
+ * each other rather than cutting — the "one continuous flight, no cuts"
+ * feel, without needing pre-rendered video (real photos + a slow zoom
+ * do the job here).
  *
  * Degrades to a plain stacked list of full-bleed sections on narrow
  * viewports and under prefers-reduced-motion.
@@ -14,6 +19,7 @@ export default function ProjectReveal() {
   const stageRef = useRef(null);
   const panelRefs = useRef([]);
   const dotRefs = useRef([]);
+  const progressRef = useRef(null);
   const [reducedMotion, setReducedMotion] = useState(false);
   const [narrow, setNarrow] = useState(false);
 
@@ -30,6 +36,9 @@ export default function ProjectReveal() {
     if (reducedMotion || narrow) return;
 
     let raf = null;
+    const N = REVEALS.length;
+    const seg = 1 / N;
+    const FADE = seg * 0.4; // how much of a segment's width the crossfade spans
 
     const render = () => {
       raf = null;
@@ -38,34 +47,39 @@ export default function ProjectReveal() {
       const rect = stage.getBoundingClientRect();
       const total = rect.height - window.innerHeight;
       const raw = total > 0 ? -rect.top / total : 0;
-      const progress = Math.min(Math.max(raw, 0), 1);
-      const seg = 1 / REVEALS.length;
-      const idx = Math.min(Math.floor(progress / seg), REVEALS.length - 1);
-      const local = (progress - idx * seg) / seg;
+      const progress = clamp(raw, 0, 1);
+
+      let activeIndex = 0;
 
       panelRefs.current.forEach((panel, i) => {
         if (!panel) return;
+        const start = i * seg;
+        const end = start + seg;
+        const local = clamp((progress - start) / seg, 0, 1);
+        const inside = progress >= start && progress <= end;
+        if (inside) activeIndex = i;
+
+        let outside = 0;
+        if (progress < start) outside = start - progress;
+        else if (progress > end) outside = progress - end;
+
+        const opacity = smooth(1 - outside / FADE);
+        panel.style.opacity = String(opacity);
+        panel.style.zIndex = inside ? "5" : "3";
+
         const img = panel.querySelector("img");
-        if (i === idx) {
-          // Short fade-in (not gone entirely, that killed the reveal effect;
-          // not long either, that read as laggy) — full opacity within
-          // ~8% of the panel's own scroll segment, roughly one quick
-          // scroll tick, not a dead-feeling pause.
-          const enter = Math.min(local / 0.08, 1);
-          const exit = Math.max((local - 0.85) / 0.15, 0);
-          panel.style.opacity = String(enter * (1 - exit));
-          panel.style.zIndex = "5";
-          if (img) img.style.transform = `scale(${1.08 - enter * 0.06 + exit * 0.04})`;
-          const copy = panel.querySelector(".reveal-copy");
-          if (copy) copy.style.transform = `translateY(${(1 - enter) * 12}px)`;
-        } else {
-          panel.style.opacity = "0";
-          panel.style.zIndex = "1";
-        }
+        if (img) img.style.transform = `scale(${1.1 - local * 0.08})`;
+
+        const copy = panel.querySelector(".reveal-copy");
+        if (copy) copy.style.transform = `translateY(${(0.5 - local) * 10}px)`;
       });
 
+      if (progressRef.current) {
+        progressRef.current.style.transform = `scaleX(${progress})`;
+      }
+
       dotRefs.current.forEach((d, i) => {
-        if (d) d.classList.toggle("is-active", i === idx);
+        if (d) d.classList.toggle("is-active", i === activeIndex);
       });
     };
 
@@ -90,6 +104,9 @@ export default function ProjectReveal() {
       {showPinned && (
         <div className="stage" ref={stageRef} style={{ height: `${REVEALS.length * 100}vh` }}>
           <div className="reveal-pin">
+            <div className="reveal-progress" aria-hidden="true">
+              <span ref={progressRef} />
+            </div>
             {REVEALS.map((project, i) => (
               <div
                 className="reveal-panel"
@@ -105,7 +122,10 @@ export default function ProjectReveal() {
           </div>
           <div className="reveal-dots" aria-hidden="true">
             {REVEALS.map((project, i) => (
-              <span key={project.id} ref={(el) => (dotRefs.current[i] = el)} />
+              <span key={project.id} className="reveal-dot" ref={(el) => (dotRefs.current[i] = el)}>
+                <i />
+                <em>{project.title}</em>
+              </span>
             ))}
           </div>
         </div>
