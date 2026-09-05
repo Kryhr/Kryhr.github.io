@@ -36,13 +36,6 @@ export const REVEALS = [
  */
 export const OTHER_WORK = [
   {
-    id: "lag-writer",
-    title: "lag-writer",
-    blurb: "A free writing assistant that trails a few words behind your typing, quietly fixing typos, missing apostrophes, and shorthand. Runs fully local with no API key needed; an optional free-tier LLM pass catches real grammar errors the local dictionary can't.",
-    tags: ["JavaScript", "Python"],
-    links: [{ label: "source", href: "https://github.com/Kryhr/lag-writer" }]
-  },
-  {
     id: "earnings-algorithm",
     title: "earnings-algorithm",
     blurb: "An earnings-reaction momentum strategy run as a Discord signal bot, not an auto-trader. Full historical backtest: +987% total return, 60.5% win rate, -15.2% max drawdown. Monte Carlo median +801% across 500 resamples. A historical backtest, not a live track record.",

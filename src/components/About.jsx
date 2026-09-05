@@ -28,7 +28,7 @@ export default function About() {
           style={{ display: "flex", justifyContent: "center", gap: "var(--space-16)", marginTop: "var(--space-16)", flexWrap: "wrap" }}
         >
           <div>
-            <div style={{ fontFamily: "var(--font-display)", fontStyle: "italic", fontSize: "var(--text-xl)" }}>6</div>
+            <div style={{ fontFamily: "var(--font-display)", fontStyle: "italic", fontSize: "var(--text-xl)" }}>5</div>
             <div style={{ color: "var(--ink-dim)", fontSize: "var(--text-sm)" }}>projects shipped and live</div>
           </div>
           <div>
@@ -50,6 +50,23 @@ export default function About() {
           style={{ marginTop: "var(--space-16)", display: "flex", flexDirection: "column", gap: "var(--space-4)" }}
         >
           <span className="eyebrow" style={{ justifyContent: "center" }}>Currently working on</span>
+
+          <div className="card" style={{ textAlign: "left" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "var(--space-3)", flexWrap: "wrap" }}>
+              <span className="status-tag">in progress</span>
+              <h3 style={{ margin: 0 }}>lag-writer</h3>
+            </div>
+            <p className="card-blurb">
+              A free writing assistant that trails a few words behind your typing, quietly fixing
+              typos, missing apostrophes, and shorthand. Runs fully local, no API key needed; an
+              optional free-tier LLM pass catches real grammar errors the local dictionary can't.
+            </p>
+            <div className="card-links">
+              <a href="https://github.com/Kryhr/lag-writer" target="_blank" rel="noopener noreferrer">
+                source <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </div>
 
           <div className="card" style={{ textAlign: "left" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "var(--space-3)", flexWrap: "wrap" }}>
