@@ -28,7 +28,7 @@ export default function About() {
           style={{ display: "flex", justifyContent: "center", gap: "var(--space-16)", marginTop: "var(--space-16)", flexWrap: "wrap" }}
         >
           <div>
-            <div style={{ fontFamily: "var(--font-display)", fontStyle: "italic", fontSize: "var(--text-xl)" }}>5</div>
+            <div style={{ fontFamily: "var(--font-display)", fontStyle: "italic", fontSize: "var(--text-xl)" }}>6</div>
             <div style={{ color: "var(--ink-dim)", fontSize: "var(--text-sm)" }}>projects shipped and live</div>
           </div>
           <div>
