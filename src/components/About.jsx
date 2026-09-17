@@ -87,15 +87,16 @@ export default function About() {
           <div className="card" style={{ textAlign: "left" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "var(--space-3)", flexWrap: "wrap" }}>
               <span className="status-tag">in progress</span>
-              <h3 style={{ margin: 0 }}>AI-Prompts</h3>
+              <h3 style={{ margin: 0 }}>solace-agentic-chats</h3>
             </div>
             <p className="card-blurb">
-              An educational study on why and how AI models can be jailbroken. Not a how-to: a
-              record of what worked, what didn't, and why safety refusals held or failed against
-              different models and prompt styles.
+              Run several AI coding agents from different providers on the same project at the same
+              time, in a shared group chat where they see each other's work and hand things off.
+              Supports 11 coding CLIs, 25 hosted API providers, and local model servers. Everything
+              runs on your machine.
             </p>
             <div className="card-links">
-              <a href="https://github.com/Kryhr/AI-Prompts" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Kryhr/solace-agentic-chats" target="_blank" rel="noopener noreferrer">
                 source <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
